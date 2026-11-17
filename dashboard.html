@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFind - Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">CF</span>
+            <span>CampusFind</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <div>
+                <span class="welcome-label">STUDENT PORTAL</span>
+                <h1>Welcome to CampusFind!</h1>
+                <p>Your campus community, connected.</p>
+
+                <p class="student-email" id="studentEmail">
+                    Loading student account...
+                </p>
+            </div>
+
+            <div class="welcome-art">
+                <span>🎓</span>
+            </div>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Your Dashboard</h2>
+                <p>What would you like to do today?</p>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card lost-card">
+                <div class="card-icon">🔍</div>
+                <h3>Lost Items</h3>
+                <p>Looking for something you lost on campus? Start searching here.</p>
+                <button type="button"
+                    onclick="window.location.href='items.html?type=Lost'">
+                    Explore Lost Items <span>→</span>
+                </button>
+            </div>
+
+            <div class="dashboard-card found-card">
+                <div class="card-icon">📦</div>
+                <h3>Found Items</h3>
+                <p>Check the belongings that have been found by other students.</p>
+                <button type="button"
+                    onclick="window.location.href='items.html?type=Found'">
+                    Explore Found Items <span>→</span>
+                </button>
+            </div>
+
+            <div class="dashboard-card report-card">
+                <div class="card-icon">＋</div>
+                <h3>Report an Item</h3>
+                <p>Lost or found something? Share the details with your campus.</p>
+                <button type="button"
+                    onclick="window.location.href='report.html'">
+                    Report Now <span>→</span>
+                </button>
+            </div>
+
+            <div class="dashboard-card profile-card">
+                <div class="card-icon">👤</div>
+                <h3>My Profile</h3>
+                <p>View your student account and manage your profile details.</p>
+                <button type="button"
+                    onclick="window.location.href='profile.html'">
+                    View Profile <span>→</span>
+                </button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">📩</div>
+                <h3>Claim Requests</h3>
+                <p>View and manage requests received for your found items.</p>
+                <button type="button"
+                    onclick="window.location.href='my-claims.html'">
+                    View Claims <span>→</span>
+                </button>
+            </div>
+
+        </section>
+
+        <section class="bottom-message">
+            <div class="bottom-icon">💙</div>
+            <div>
+                <h3>Let's make campus life easier!</h3>
+                <p>Every returned item makes someone's day better.</p>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 CampusFind. Made for the campus community.</p>
+        </footer>
+
+    </main>
+
+    <script type="module" src="firebase.js"></script>
+
+</body>
+</html>

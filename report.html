@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Item - CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">CF</span>
+            <span>CampusFind</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <h1>Report an Item</h1>
+        <p>Help your campus community find lost belongings.</p>
+
+        <form id="reportForm">
+
+            <select id="itemType" required>
+                <option value="">Select Report Type</option>
+                <option value="Lost">I Lost Something</option>
+                <option value="Found">I Found Something</option>
+            </select>
+
+            <input type="text" id="itemName"
+                placeholder="Item Name (e.g. Water Bottle)" required>
+
+            <input type="text" id="category"
+                placeholder="Category (e.g. Electronics)" required>
+
+            <textarea id="description"
+                placeholder="Describe the item..." required></textarea>
+
+            <input type="text" id="location"
+                placeholder="Where was it lost/found?" required>
+
+            <button type="submit">Submit Report</button>
+
+        </form>
+
+        <p id="reportMessage"></p>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <script type="module" src="report.js"></script>
+</body>
+</html>

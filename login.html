@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>CampusFind</h1>
+        <h2>Welcome Back!</h2>
+        <p>Login to your student account</p>
+
+        <form id="loginForm">
+            <input type="email" id="loginEmail"
+            placeholder="College Email Address" required>
+
+            <input type="password" id="loginPassword"
+            placeholder="Password" required>
+
+            <p style="text-align:right; margin:5px 0;">
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+            </p>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="loginMessage"></p>
+
+        <p>Don't have an account?
+        <a href="signup.html">Create Account</a></p>
+
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+
+</body>
+</html>

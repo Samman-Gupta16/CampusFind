@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Item - CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .claim-container {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        }
+
+        .claim-container h1 {
+            margin-bottom: 10px;
+        }
+
+        .claim-info {
+            background: #f4f7fb;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .claim-form textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            resize: vertical;
+            margin-top: 10px;
+        }
+
+        .claim-form button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+
+        #claimMessage {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .claim-container {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">CF</span>
+            <span>CampusFind</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="claim-container">
+
+        <h1>Claim This Item</h1>
+        <p>Provide details to help verify that this item belongs to you.</p>
+
+        <div class="claim-info">
+            <h3 id="itemName">Loading item...</h3>
+            <p id="itemCategory"></p>
+            <p id="itemLocation"></p>
+        </div>
+
+        <form id="claimForm" class="claim-form">
+
+            <label for="proofDescription">
+                **How can you identify this item?**
+            </label>
+
+            <textarea
+                id="proofDescription"
+                rows="7"
+                minlength="10"
+                maxlength="500"
+                placeholder="Describe identifying details of your item..."
+                required></textarea>
+
+            <p>Minimum 10 and maximum 500 characters.</p>
+
+            <button type="submit">Submit Claim Request</button>
+
+        </form>
+
+        <p id="claimMessage"></p>
+
+        <a href="items.html?type=Found">← Back to Found Items</a>
+
+    </main>
+
+    <script type="module" src="claim.js"></script>
+
+</body>
+</html>
